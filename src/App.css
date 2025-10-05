@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(100, 100, 255, 0.3);
+  color: #ffffff;
+}
+
+.description-item-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 1181px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.description-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.planet-title {
+  letter-spacing: 22px;
+}
+
+.header-container {
+  max-width: 1726px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.header-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+
+  .description-container {
+    gap: 20px;
+  }
+
+  .description-item-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .description-item {
+    align-items: center;
+  }
+
+  .planet-title {
+    letter-spacing: 0;
+  }
+
+  .header-container {
+    padding: 20px 0;
+  }
+  .header-section {
+    justify-content: center;
+  }
+}
